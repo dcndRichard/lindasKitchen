@@ -1,0 +1,351 @@
+/*START CORE STYLES*/
+:root{
+    --primary:#FEA020;
+    --light:#fff;
+    --blue:#0000ff;
+    --dark:#333;
+    --shadow: 0 1px 9px rgba(104,104,104,0.8);
+}
+
+body{background:var(--blue);
+    font-size:100%;
+    font-family:Arial, helvetica, georgia
+}
+
+*{
+    box-sizing: border-box;
+}
+/*END CORE STYLES*/
+
+
+
+/* WRAPPER */
+#wrapper{
+    display: grid;  
+    max-width:1143px;
+    margin:0 auto;
+}
+
+
+
+/*START HEADER*/
+header{
+    /* background:var(--primary); */
+    background-image:url("../images/header7.png");
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header div{
+    width:15%;
+    z-index: 2;
+}
+header img{
+    max-width:100%;
+    display: block;
+    margin-top: 5px;
+     
+}
+
+
+
+/* Navigation */
+
+nav{
+    
+    background: var(--light);
+    display: grid;
+    width:930px;
+    margin: -18px auto 0 auto;
+    padding:0;
+    z-index: 1;  
+}
+
+nav ul{
+    display: flex;
+    padding:0;
+    margin:0;
+   
+    list-style: none;
+    justify-items: center;
+}
+nav ul a{
+    display:block;
+    padding:2px 10px;
+    border-right: 1px solid var(--dark);
+    text-align: center;
+}
+
+nav ul a:hover{
+    background:var(--primary)
+}
+nav img{
+    max-width:100%; 
+}
+
+
+
+/* DynamicDishDisplay */
+
+section{
+    /* background: var(--primary); */
+    background-image:url("../images/foodDisplay4.png"); 
+    background-repeat:no-repeat; 
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    min-height: 350px;
+    justify-items:center;
+    padding-top: 10px;
+}
+
+
+
+/* Hidden ItemOrderContainer */
+#itmeOrderContainer{
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid var(--dark);
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;   
+    
+}
+#itmeOrderContainer .closeBtnDiv{
+    grid-column: 1/3;
+    padding: 10px;
+    border:var(--dark)
+}
+#itmeOrderContainer .closeBtnDiv div{
+    display: inline-block;
+    color:var(--dark);
+    font-size:.8rem
+}
+#itmeOrderContainer .closeBtnDiv div:hover{
+    cursor: pointer;
+    color:#EF3737;
+}
+
+#itmeOrderContainer .itemPicDiv{
+    justify-self:end;
+}
+#itmeOrderContainer .itemPicDiv img{
+    width:100%;
+}
+#itmeOrderContainer .formDiv{
+    justify-self:start;
+}
+#itmeOrderContainer td,th{
+ padding: 5px;
+ text-align: justify  
+}
+
+
+
+/* MAIN */
+
+main{
+    background: var(--primary);
+    border-bottom: 1px solid var(--blue);
+    background-image:url("../images/contentBg_w950_h264.png");
+    /* background-size: contain; */
+    background-repeat:no-repeat;
+    min-height: 264px;
+    width: 930px;
+    margin:-70px auto 0 auto;
+    padding-left: 30%;
+    border-left: 1px solid var(--primary);
+}
+main p{
+    color:var(--dark);
+    line-height: 1.5rem;
+    padding:0 10px;
+    text-shadow: var(--shadow);
+}
+main div{
+    box-shadow: var(--shadow);
+    /* width:90%; */
+    margin: 0px auto;  
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    background:var(--primary);
+    /* z-index: 1;     */
+
+}
+
+main div img{     
+    display: inline-block;
+}
+
+/* menueContent */
+
+main .menuPicContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap:10px;
+    padding:10px;
+}
+
+
+
+/* FOOTER */
+footer{
+    background: var(--light);
+    background-repeat:no-repeat;
+    width:930px;
+    margin: 0 auto;
+    border-radius: 0 0 15px 15px;
+    /* z-index: -1;     */
+    text-align: center;
+}
+footer ul{
+    list-style: none;
+}
+footer ul a{
+    color:var(--dark);
+    text-decoration: none;
+    font-size: .9rem;
+    
+}
+footer ul a:hover{
+    color: var(--primary);
+}
+
+
+/* misc clasess */
+.small{font-size:.7em}
+.noMargin{margin: 0;}
+
+
+
+
+
+
+
+/* MAX-WIDTH 1180 */
+@media only screen and (max-width: 1180px) {
+    #wrapper{
+        width: 100% 
+    }
+
+    header{
+        /* background:var(--primary); */
+        background-image:url("../images/header7.png");
+        background-size: 100%;
+        width:80%;
+        margin: 0 auto;
+        
+    }
+
+    nav{
+        
+        background: var(--light);
+        display: grid;
+        width:80%;
+        margin: -18px auto 0 auto;
+        padding:0;
+        z-index: 1;  
+    }
+
+    section{
+        width: 100%;
+        /* background: var(--primary); */
+        background-image:url("../images/foodDisplay4_krop.png"); 
+        border:1px solid #2721B1;
+        background-size: 100% 100%;
+        min-height: 0%;  
+        padding-top: .8%;
+    }
+     section #ltClmn{
+        width: 80%;
+        margin-left: -12%;
+    }
+    section #midClmn{
+        width: 124%;
+    }
+    section #rtClmn{
+        width: 80%;
+        margin-left: 12%;
+    }
+    section img{
+        max-width: 100%;
+    }
+
+
+    main{
+        background: var(--primary);
+        border-bottom: 1px solid var(--blue);
+        background-image:url("../images/contentBg_w950_h264.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        min-height: 0px;
+        width: 80%;
+        margin:0px auto 0 auto;
+        padding-left: 30%;
+        border-left: 1px solid var(--primary);
+    }
+
+    footer{
+        width:80%;
+    }
+    footer ul a{
+        font-size: .8em;
+    }
+
+}
+
+
+
+
+/* MAX-WIDTH 932 */
+@media only screen and (max-width: 932px) {
+    main div{
+        grid-template-columns:1fr;
+        text-align: center;
+    }
+}
+
+
+
+
+/* MAX-WIDTH 628 */
+@media only screen and (max-width: 628px) {
+
+    nav ul li{
+        width:18%;
+        border-bottom: 1px solid var(--dark);
+    }
+    nav ul a{
+        border-right: 1px solid var(--dark);
+        text-align: left;
+    }
+}
+
+
+@media only screen and (max-width: 456px) {
+
+    main{
+        background-image:none;
+        padding-left: 0%;
+    }
+
+    main .menuPicContainer{
+        grid-template-columns: 1fr;
+        grid-gap:10px;
+        padding:10px;
+    }
+    main p {
+        font-size: .9em
+    }
+    main div{
+        width: 100%;
+    }
+    main div img{     
+        max-width: 50%;
+    }
+}
