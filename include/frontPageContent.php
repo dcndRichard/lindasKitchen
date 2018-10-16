@@ -1,4 +1,6 @@
 <?php
+$content = $_SERVER['REQUEST_URI'];
+exit();
 if($_SERVER['REQUEST_URI'] == '/duaneRichardsPortfolio/websites/lindasKitchen/index.php'){
         $content = 
         "<p>
