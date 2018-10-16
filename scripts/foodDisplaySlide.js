@@ -1,4 +1,4 @@
-var ltClmnPics=new Array("images/displayDishes/tacos5.png","images/displayDishes/bowlw5.png","images/displayDishes/quesedilla5.png","images/displayDishes/chips5.png");
+var ltClmnPics=new Array("images/displayDishes/tacos5.png","images/displayDishes/bowl5.png","images/displayDishes/quesedilla5.png","images/displayDishes/chips5.png");
 var midClmnPics=new Array("images/displayDishes/nachos5.png","images/displayDishes/tostada5.png","images/displayDishes/sample5.png","images/displayDishes/salad5.png");
 var rtClmnPics=new Array("images/displayDishes/softTacos5.png","images/displayDishes/bowl5.png","images/displayDishes/fajita5.png","images/displayDishes/taquitos5.png");
 
